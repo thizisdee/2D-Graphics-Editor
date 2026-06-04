@@ -48,14 +48,44 @@ void displayCanvas()
         printf("\n");
     }
 }
-
 int main()
 {
+    int choice;
+
     initCanvas();
 
-    drawRectangle(2,5,10,5);
+    while(1)
+    {
+        printf("\n\n----- MENU -----\n");
+        printf("1. Display Canvas\n");
+        printf("2. Draw Rectangle\n");
+        printf("3. Exit\n");
 
-    displayCanvas();
+        printf("Enter choice: ");
+        scanf("%d",&choice);
 
-    return 0;
+        switch(choice)
+        {
+            case 1:
+                displayCanvas();
+                break;
+
+            case 2:
+            {
+                int r,c,w,h;
+
+                printf("Enter row column width height: ");
+                scanf("%d%d%d%d",&r,&c,&w,&h);
+
+                drawRectangle(r,c,w,h);
+                break;
+            }
+
+            case 3:
+                return 0;
+
+            default:
+                printf("Invalid Choice!");
+        }
+    }
 }
