@@ -45,3 +45,4 @@ How do I change the Git author name to my own account?
 RESPONSE
 
 Instructions were provided for configuring Git username and email and updating commit information.
+Author updated
